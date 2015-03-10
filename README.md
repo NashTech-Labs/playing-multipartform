@@ -4,7 +4,9 @@ A basic example to handle and test MultipartFormData request in Play Framework 2
 The standard way to upload files in a web application is to use a form with a special multipart/form-data encoding, which lets you mix standard form data with file attachment data.
 Please note: the HTTP method used to submit the form must be POST (not GET). 
 
+-----------------------------------------------------
 ###Code in action for Controller and Service
+-----------------------------------------------------
 - Multipart form upload handlers looks like this:
 [Application.scala](https://github.com/knoldus/playing-multipartform/blob/master/app/controllers/Application.scala)
 
@@ -42,8 +44,9 @@ Please note: the HTTP method used to submit the form must be POST (not GET).
   }
 
 ```
-
+------------------------------------------------------
 ###Test Code for Controller and Service
+------------------------------------------------------
 [ApplicationSpec.scala](https://github.com/knoldus/playing-multipartform/blob/master/test/ApplicationSpec.scala)
 ```
 "should be valid" in new WithApplication {
@@ -87,7 +90,7 @@ Please note: the HTTP method used to submit the form must be POST (not GET).
 -----------------------------------------------------------------------
 ###Test the application with code coverage
 -----------------------------------------------------------------------
-* Execute `$ ./activator clean coverage test` to test and generate coverage report
+* Execute `$ ./activator clean coverage test` to test
 * Execute `$ ./activator coverageReport` to generate coverage report
 
 File Upload Form
