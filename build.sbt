@@ -15,3 +15,19 @@ libraryDependencies ++= Seq(
   	"org.webjars" 			% 	"html5shiv" 		% "3.7.0",
   	"org.webjars" 			% 	"respond" 			% "1.4.2"
 )
+
+ScoverageSbtPlugin.ScoverageKeys.coverageExcludedPackages := "<empty>;Reverse.*;views.*;"
+
+ScoverageSbtPlugin.ScoverageKeys.coverageMinimum := 80
+
+ScoverageSbtPlugin.ScoverageKeys.coverageFailOnMinimum := true
+
+ScoverageSbtPlugin.ScoverageKeys.coverageHighlighting := {
+	if (scalaBinaryVersion.value == "2.10") false
+	else false
+}
+
+publishArtifact in Test := false
+
+parallelExecution in Test := false
+
