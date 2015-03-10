@@ -107,4 +107,4 @@ Test Coverage
 * [stackoverflow](http://stackoverflow.com/a/19670860/2893807)
 * [Bootstrap 3.1.1](http://getbootstrap.com/css/)
 * [Bootswatch](http://bootswatch.com/darkly/)
-* [WebJars](http://www.webjars.org/)This is your new Play application
+* [WebJars](http://www.webjars.org/)
