@@ -1,9 +1,11 @@
 package services
 
-import play.api.mvc.Request
-import play.api.mvc.MultipartFormData
-import play.api.libs.Files.TemporaryFile
+import java.io.File
+
 import play.api.Logger
+import play.api.libs.Files.TemporaryFile
+import play.api.mvc.MultipartFormData
+import play.api.mvc.Request
 
 object UploadService extends UploadService
 
