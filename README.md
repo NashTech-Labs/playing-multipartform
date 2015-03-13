@@ -10,7 +10,7 @@ Please note: the HTTP method used to submit the form must be POST (not GET).
 - Multipart form upload handlers looks like this:
 [Application.scala](https://github.com/knoldus/playing-multipartform/blob/master/app/controllers/Application.scala)
 
-```
+```scala
   val uploadService: UploadService
 
   def upload = Action(parse.multipartFormData) { implicit request =>
@@ -22,7 +22,7 @@ Please note: the HTTP method used to submit the form must be POST (not GET).
 
 - Service for upload file looks like this:
 [UploadService.scala](https://github.com/knoldus/playing-multipartform/blob/master/app/services/UploadService.scala)
-```
+```scala
   /**
    * Get file from the request and move it in your location
    *
@@ -48,7 +48,7 @@ Please note: the HTTP method used to submit the form must be POST (not GET).
 ###Test Code for Controller and Service
 ------------------------------------------------------
 [ApplicationSpec.scala](https://github.com/knoldus/playing-multipartform/blob/master/test/ApplicationSpec.scala)
-```
+```scala
 "should be valid" in new WithApplication {
   val request = mock[Request[MultipartFormData[TemporaryFile]]]
   mockedUploadService.uploadFile(request) returns "File Uploaded"
@@ -58,7 +58,7 @@ Please note: the HTTP method used to submit the form must be POST (not GET).
 ```
 
 [UploadServiceSpec.scala](https://github.com/knoldus/playing-multipartform/blob/master/test/services/UploadServiceSpec.scala)
-```
+```scala
 "UploadService" should {
     "uploadFile returns (File uploaded)" in new WithApplication {
       val files = Seq[FilePart[TemporaryFile]](FilePart("file", "UploadServiceSpec.scala", None, TemporaryFile("file", "spec")))
